@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane layoutY="6.0" prefHeight="250.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Accueil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="167.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue au converteur">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="156.0" layoutY="156.0" prefHeight="90.0" prefWidth="374.0" text="Ce convertisseur convertit l'argent, les mesures, &#10;les fréquences, les masses, le temps et la température. &#10;Les deux différentes systèmes sont dans les &#10;convertisseurs de mesure et de masse" />
+                        <Button layoutX="544.0" layoutY="382.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="argent1" text="Argent">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt1" layoutX="109.0" layoutY="164.0" onKeyReleased="#calculerArgent1" prefHeight="50.0" prefWidth="150.0" />
+                        <TextField fx:id="txt2" layoutX="371.0" layoutY="164.0" onKeyReleased="#calculerArgent2" prefHeight="50.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo1" layoutX="109.0" layoutY="214.0" onAction="#calculerArgent1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo2" layoutX="371.0" layoutY="214.0" onAction="#calculerArgent2" prefWidth="150.0" />
+                        <Text layoutX="184.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertiseur d'Argent">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#00000080" layoutX="296.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="74.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="521.0" layoutY="377.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="mesure1" text="Mesure">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt3" layoutX="109.0" layoutY="164.0" onKeyReleased="#calculerMesure1" prefHeight="50.0" prefWidth="150.0" />
+                        <TextField fx:id="txt4" layoutX="371.0" layoutY="164.0" onKeyReleased="#calculerMesure2" prefHeight="50.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo3" layoutX="371.0" layoutY="214.0" onAction="#calculerMesure1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo4" layoutX="109.0" layoutY="214.0" onAction="#calculerMesure2" prefWidth="150.0" />
+                        <Text fill="#00000080" layoutX="296.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="230.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text layoutX="195.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertir de mesure">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="521.0" layoutY="377.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Fréquence">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt5" layoutX="109.0" layoutY="164.0" onKeyReleased="#caculertenergy1" prefHeight="50.0" prefWidth="150.0" />
+                        <TextField fx:id="txt6" layoutX="371.0" layoutY="164.0" onKeyReleased="#caculerenergy2" prefHeight="50.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo5" layoutX="109.0" layoutY="214.0" onAction="#caculertenergy1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo6" layoutX="371.0" layoutY="214.0" onAction="#caculerenergy2" onKeyReleased="#caculerenergy2" prefWidth="150.0" />
+                        <Text fill="#00000080" layoutX="296.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="175.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertir de fréquence">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="521.0" layoutY="377.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Masse">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt7" layoutX="109.0" layoutY="164.0" onKeyReleased="#caculermass1" prefHeight="50.0" prefWidth="150.0" />
+                        <TextField fx:id="txt8" layoutX="371.0" layoutY="164.0" onKeyReleased="#caculermass2" prefHeight="50.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo7" layoutX="109.0" layoutY="214.0" onAction="#caculermass1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo8" layoutX="371.0" layoutY="214.0" onAction="#caculermass2" prefWidth="150.0" />
+                        <Text fill="#00000080" layoutX="296.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="190.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertir de masse">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="521.0" layoutY="377.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Temp">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt9" layoutX="109.0" layoutY="164.0" onKeyReleased="#caculertime1" prefHeight="50.0" prefWidth="150.0" />
+                        <TextField fx:id="txt10" layoutX="371.0" layoutY="164.0" onKeyReleased="#caculertime2" prefHeight="50.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo9" layoutX="371.0" layoutY="214.0" onAction="#caculertime1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo10" layoutX="109.0" layoutY="214.0" onAction="#caculertime2" prefWidth="150.0" />
+                        <Text fill="#00000080" layoutX="296.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="190.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertir de temp">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="521.0" layoutY="377.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Température">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt11" layoutX="109.0" layoutY="164.0" onKeyReleased="#temp1" prefHeight="50.0" prefWidth="150.0" />
+                        <TextField fx:id="txt12" layoutX="371.0" layoutY="164.0" onKeyReleased="#temp2" prefHeight="50.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo11" layoutX="109.0" layoutY="214.0" onAction="#temp1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbo12" layoutX="371.0" layoutY="214.0" onAction="#temp2" prefWidth="150.0" />
+                        <Text fill="#00000080" layoutX="296.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="160.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertir de température">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="521.0" layoutY="377.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
