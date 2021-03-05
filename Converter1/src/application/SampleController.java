@@ -246,7 +246,7 @@ double []mass={1.0,0.00001,454,28.35};//déclaration du tableaux de mass en term
     	{
     	double taux=tbtA[item2]/tbtA[item1];//détermine le taux par diviser les "items" qui sont mutiplie par les éleménts du tableaux corrrespondant 
     	double res= taux*(Double.parseDouble(txtA.getText()));// résultat = le input de txtA fois taux
-    	txtB.setText(String.format("%.7f", res));// set txtb res avec 4 chiffre significant après le décimal
+    	txtB.setText(String.format("%.7f", res));// set txtb res avec 7 chiffre significant après le décimal
     	}catch (NumberFormatException e)// vois si l'usager a pas écrit un nombre
     	{
     		Alert alert=new Alert(AlertType.ERROR);// méthod du alert qui donne un alert et mettre le focus sur txtA
